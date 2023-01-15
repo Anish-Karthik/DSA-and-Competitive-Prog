@@ -2,7 +2,7 @@
 using namespace std;
 void perm(string &s, vector<string> &res,int ind=0) {
 
-	if (ind==s.size()) {
+	if (ind==s.size()-1) {
 		res.push_back(s);
 		return;
 	}
@@ -15,11 +15,10 @@ void perm(string &s, vector<string> &res,int ind=0) {
 
 }
 
-
 int main()
 {
     vector<string> res;
-    string s = "abc";
+    string s = "abcde";
     perm(s,res,0);
     for(string x: res) {
     	cout<<x<<endl;
