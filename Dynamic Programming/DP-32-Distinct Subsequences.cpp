@@ -28,9 +28,8 @@ public:
         int n = t.size();
         int m = s.size();
         vector<int> prev(n+1,0),cur(n+1,0);
-        prev[0] = 1;
+        prev[0] = cur[0] = 1;
         for(int i = 1; i <= m; i++) {
-            prev[0] = max(prev[0],1);
             for(int j = 1; j <= n; j++) {
                 int match = 0;
                 if(s[i-1] == t[j-1]) match = prev[j-1];
